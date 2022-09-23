@@ -124,6 +124,7 @@
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
+  /* margin: -1.5rem auto; */
 }
 .form h3 {
     color: #e0dfdc;
@@ -179,4 +180,7 @@
     height:100%;
     width:100%;
     position:absolute;
+}
+audio{
+    height: 4vw;
 }
