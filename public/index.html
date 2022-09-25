@@ -1,89 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="portada.css">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+<body>
+<!-- NAV DE PANEL DE ENLACES -->
+<header>
+  <div class="main-content__brand1">
+    <div>
+        <img src="logo.png" alt="logo empresa" height="30" width="30">
+        <h1 href="#" class="active">MMM CHARALA</h1>           
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <nav>
+    <ul>
+        <li><a href="inicio.html" ><button class="nobtn">INICIO</button></a></li>
+        <li><a href="programas.html" ><button class="nobtn">PROGRAMACION</button></a></li>
+        <li><a href="informacion.html" ><button class="nobtn">NOSOTROS</button></a></li>
+        <li><a href="galeria.html" ><button class="nobtn">GALERIA</button></a></li>
+</ul>
+</nav> 
+</div>
+</header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<!-- CARRUSEL IMAGENES -->
+<div class="slider">
+  <ul>
+    <li><img src="img/publicidad/1.jpeg" alt=""></li>
+    <li><img src="img/publicidad/2.jpeg" alt=""></li>
+    <li><img src="img/publicidad/3.jpeg" alt=""></li>
+    <li><img src="img/publicidad/4.jpeg" alt=""></li>
+  </ul>
+</div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<!-- MUESTRA DE IMAGENES -->
+<div class="cont-inter-qs shadow">
+    <h3>
+        IMÁGENES
+    </h3>
+    <p>
+        Aquí podrás encontrar nuestros mejores momentos y eventos que se han tenido en este tiempo
+    </p>
+    <div class="form-group">
+      <ul>
+      <li><img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/f7/b1/01/hotel-cacique-chalala.jpg" alt=""></li>
+      <li><img src="img/galeria/1.jpeg" alt=""></li>
+      <li><img src="img/galeria/2.jpeg" alt=""></li>
+    </ul>
+    </div>
+    <a href="galeria.html" ><button class="nobtn">MAS IMAGENES..</button></a>
+      
+</div>
+
+<!-- EMISORA VITUAL -->
+<div class="form">
+  <div class="form-gruop3">
+    <h3>
+      EMISORA VIRTUAL
+    </h3>
+   -->
+  </div> 
+  <div class="contenedor">
+    <img src="img/iconos/emisora.jpg" alt="" width="500px" height="100px">
+    <audio class="cont-encima" autoplay="autoplay" controls="controls"><source src="https://emisorasvirtuales.com.co:9627/live" type="audio/mpeg" /> </audio>
+  </div> 
+</div>
+
+<!-- Ubicacion -->
+<div class="map-responsive">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.264729108641!2d-73.1469157!3d6.2878764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f282956a384aa4c!2sIglesia%20Movimiento%20Misionero%20Mundial!5e0!3m2!1ses!2sco!4v1663874488089!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- PIE DE PAGINA -->
+
+<footer class="bg-light text-center text-white">
+  <!-- Grid container -->
+    <ul>
+      <li><a href="https://www.facebook.com/Vida-Nueva-Stereo-106887908554618/" target="_blank"><img src="img/iconos/facebook.png" width="50px" height="50px"></a></li>
+      <li><a href="https://twitter.com/CharalaMmm" target="_blank"><img src="img/iconos/twitter.png" alt="" width="50px" height="50px"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCsgYAxpFRxEBSnqrGjcpoUA/featured" target="_blank"><img src="img/iconos/youtube.png" alt="" width="50px" height="50px"></a></li>
+      <li><a href="https://instagram.com/iglesiammmcharala?utm_medium=copy_link" target="_blank"><img src="img/iconos/instagram.png" alt="" width="50px" height="50px"></a></li>
+      <li><a href="https://wa.me/573156451632" target="_blank"><img src="img/iconos/whatsapp.png" alt="" width="50px" height="50px"></a></li>
+
+    </ul>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(20, 106, 236, 0.671);">
+    © 2022 Movimiento Misionero Mundial Charala-Santander|
+    <a class="text-white">Derechos Reservados</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
 </html>
+
